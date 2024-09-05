@@ -1,21 +1,26 @@
-
 .bungee-tint-regular {
     font-family: "Bungee Tint", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-
+}
 .nerko-one-regular {
     font-family: "Nerko One", cursive;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  * {
+}
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Nerko One", cursive, sans-serif;
+}
+html {
+    min-height: 100%;
+    background-image: url('https://motionbgs.com/media/3249/astronaut-in-outer-space.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 body {
     display: flex;
@@ -23,7 +28,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(101, 101, 101);
+    /* background-color: black; */
 }
 .container {
     display: flex;
@@ -34,13 +39,13 @@ body {
     border-radius: 10px;
     align-items: flex-start;
     justify-content: space-between;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-.welcome-div img {
+.welcome-display img {
     user-select: none;
     max-width: 270px;
 }
-.welcome-div h1 {
+.welcome-display h1 {
     display: flex;
     font-family: "Bungee Tint", sans-serif;
     font-size: 2rem;
@@ -48,16 +53,13 @@ body {
     justify-content: center;
     text-transform: uppercase;
 }
-
-.welcome-div p {
+.welcome-display p {
     display: flex;
     justify-content: center;
     padding: 5px 0px;
     font-size: 1.5rem;
 }
-
-
-.welcome-div ol {
+.welcome-display ol {
     text-align: left;
     padding: 0px 0px 0px 30px;
     font-size: 1.25rem;
@@ -103,7 +105,7 @@ body {
     margin-top: 40px;
     justify-content: center;
 }
-:where(.results-div, .keyboard) button {
+:where(.results-display, .keyboard) button {
     color: #fff;
     border: none;
     outline: none;
@@ -113,4 +115,102 @@ body {
     border-radius: 4px;
     text-transform: uppercase;
     background: #5eba72;
+}
+.keyboard button {
+    padding: 7px;
+    width: calc(100% / 9 - 5px);
+}
+.keyboard button[disabled] {
+    pointer-events: none;
+    opacity: 0.6;
+}
+:where(.results-display, .keyboard) button:hover {
+    background: #8df3a3;
+}
+.results-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 0 10px;
+    transition: opacity 0.4s ease;
+}
+.results-display.show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.4s 0.4s ease;
+}
+.results-display.content {
+    padding: 30px;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.results-display img {
+    max-width: 130px;
+    margin-bottom: 20px;
+}
+.results-display img[src="images/victory.gif"] {
+    margin-left: -10px;
+}
+.results-display h4 {
+    font-size: 1.53rem;
+}
+.results-display p {
+    font-size: 1.15rem;
+    margin: 15px 0 30px;
+    font-weight: 500;
+}
+.results-display p b {
+    color: #5eba72;
+    font-weight: 600;
+}
+.results-display button {
+    padding: 12px 23px;
+}
+@media (max-width: 782px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+    .hangman-box img {
+        max-width: 200px;
+    }
+    .hangman-box h1 {
+        display: none;
+    }
+    .game-box h4 {
+        font-size: 1rem;
+    }
+    .word-display .letter {
+        margin-bottom: 35px;
+        font-size: 1.7rem;
+    }
+    .word-display .letter.guessed {
+        margin: -35px 0 25px;
+    }
+    .results-display img {
+        max-width: 120px;
+    }
+    .results-display h4 {
+        font-size: 1.45rem;
+    }
+    .results-display p {
+        font-size: 1.1rem;
+    }
+    .results-display button {
+        padding: 10px 18px;
+    }
 }
