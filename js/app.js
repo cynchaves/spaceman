@@ -1,24 +1,44 @@
 /*-------------- Constants -------------*/
 const wordList = [
     {
-        word: "giraffe",
-        hint: "The tallest mammal in the animal kingdom."
+        word: "earth",
+        hint: "The third planet from the Sun."
     },
     {
-        word: "apple",
-        hint: "A red and shiny fruit used to make a popular juice."
+        word: "mars",
+        hint: "Also known as the Red Planet."
     },
     {
-        word: "pajamas",
-        hint: "Comfy clothes worn to go to sleep."
+        word: "mercury",
+        hint: "The smallest planet in the Solar System."
     },
     {
-        word: "canine",
-        hint: "An animal considered to be man's best friend."
+        word: "jupiter",
+        hint: "The largest planet in the Solar System."
     },
     {
-        word: "vehicle",
-        hint: "Used as a primary means of transportation."
+        word: "uranus",
+        hint: "Planet named after the Greek god Ouranos."
+    },
+    {
+        word: "venus",
+        hint: "The brightest planet in the Solar System."
+    },
+    {
+        word: "saturn",
+        hint: "Planet known for its many rings."
+    },
+    {
+        word: "neptune",
+        hint: "Known for possesing the fastest wind speed of any planet."
+    },
+    {
+        word: "galaxy",
+        hint: "A system of stars, interstellar gas and dark matter."
+    },
+    {
+        word: "astronomy",
+        hint: "The study of the universe beyond Earth's atmosphere."
     },
 ];
 
@@ -41,8 +61,8 @@ const resetBtn = document.querySelector('.reset-button');
 /*-------------- Functions -------------*/
 const wordSelector = (() => {
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
-    currentWord = word;
-    hintDisplay.textContent = hint;
+    currentWord = `${word}`;
+    hintDisplay.textContent = `Hint - ${hint}`;
 });
 
 const init = (() => {
