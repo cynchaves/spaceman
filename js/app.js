@@ -69,7 +69,7 @@ const init = (() => {
     wordSelector();
     correctLtrGuesses = [];
     incorrectGuessCount = 0;
-    spacemanImg.src = 'images/hangman-0.svg';
+    spacemanImg.src = 'images/star-0.png';
     incorrectGuesses.innerText = `${incorrectGuessCount} / ${maxGuesses}`;
     wordDisplay.innerHTML = currentWord.split('').map(() => `<li class='letter'></li>`).join('');
     keyboard.querySelectorAll('button').forEach((button) => button.disabled = false);
@@ -101,7 +101,7 @@ const gamePlay = ((button, selectedLetter) => {
     }
     else {
       incorrectGuessCount++;
-      spacemanImg.src = `images/hangman-${incorrectGuessCount}.svg`;
+      spacemanImg.src = `images/star-${incorrectGuessCount}.png`;
     }
     button.disabled = true;
     incorrectGuesses.innerText = `${incorrectGuessCount} / ${maxGuesses}`;

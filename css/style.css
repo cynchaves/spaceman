@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Nerko+One&display=swap');
-
+.original-surfer-regular {
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.bungee-tint-regular {
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Nerko One", sans-serif;
+    font-family: "Original Surfer", sans-serif;
+    /* font-family: "Nerko One", sans-serif; */
     font-weight: 400;
     font-style: normal;
 }
@@ -36,9 +45,11 @@ body {
     justify-content: space-between;
 }
 .welcome-display img {
-    display: block;
+    display: flex;
     margin: auto;
-    max-width: 270px;
+    justify-content: center;
+    align-content: center;
+    max-width: 350px;
 }
 .welcome-display h1 {
     display: flex;
@@ -48,6 +59,8 @@ body {
     font-size: 2.5rem;
     text-align: center;
     justify-content: center;
+    align-content: center;
+    margin: -35px auto auto auto;
 }
 .welcome-display p {
     display: flex;
