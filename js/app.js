@@ -57,10 +57,8 @@ const init = (() => {
 });
 
 const endGameDisplay = ((isWin) => {
-    const resultsText = isWin ? `You found the correct word: ` : `The correct word was: `;
-    resultsDisplay.querySelector('img').src = `images/${isWin ? 'victory' : 'lost'}.gif`;
+    resultsDisplay.querySelector('img').src = `images/${isWin ? 'win' : 'lost'}.gif`;
     resultsDisplay.querySelector('h4').innerText = isWin ? 'Congratulations! You Won!' : 'Please try again';
-    resultsDisplay.querySelector('p').innerHTML = `${resultsText} <b>${currentWord}</b>`;
     resultsDisplay.classList.add('show');
 });
 

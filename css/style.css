@@ -1,18 +1,12 @@
-.bungee-tint-regular {
-    font-family: "Bungee Tint", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.nerko-one-regular {
-    font-family: "Nerko One", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Nerko+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Nerko One", cursive, sans-serif;
+    font-family: "Nerko One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 html {
     min-height: 100%;
@@ -44,12 +38,13 @@ body {
 .welcome-display img {
     display: block;
     margin: auto;
-    user-select: none;
     max-width: 270px;
 }
 .welcome-display h1 {
     display: flex;
     font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 2.5rem;
     text-align: center;
     justify-content: center;
@@ -61,7 +56,7 @@ body {
     padding: 5px 0px;
     font-size: 2rem;
 }
-.welcome-display ol {
+.welcome-display ul {
     text-align: left;
     padding: 0px 0px 0px 30px;
     font-size: 1.3rem;
@@ -83,35 +78,28 @@ body {
     width: 28px;
     font-size: 2rem;
     text-align: center;
-    font-weight: 600;
     margin-bottom: 40px;
     text-transform: uppercase;
-    border-bottom: 3px solid #000;
+    border-bottom: 3.5px solid #000;
 }
-.word-display .letter.guesses {
-    margin: -40px 0 35px;
-    border-color: transparent;
-}
+
 .game-box h4 {
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.75rem;
     margin-bottom: 15px;
 }
 
-.game-box .incorrect-guesses b {
-    color: #ff0000;
+.incorrect-guesses b {
+    color: rgb(189, 28, 28);
 }
-.game-box .keyboard {
+.keyboard {
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
-    margin-top: 40px;
     justify-content: center;
 }
-
 :where(.results-display, .keyboard) button {
-    color: rgb(0, 0, 0);
+    color: black;
     border: black solid 2px;
     outline: none;
     cursor: pointer;
@@ -129,56 +117,49 @@ body {
     pointer-events: none;
     opacity: 0.6;
 }
-:where(.results-display, .keyboard) button:hover {
-    background: rgb(255, 255, 255);
+.keyboard button:hover {
+    background: rgb(216, 216, 216);
 }
 .results-display {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     opacity: 0;
     pointer-events: none;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.79);
     display: flex;
     align-items: center;
     justify-content: center;
+    align-content: center;
     z-index: 9999;
     padding: 0 10px;
     transition: opacity 0.4s ease;
+    margin: auto;
+    border-radius: 100px;
 }
 .results-display.show {
     opacity: 1;
     pointer-events: auto;
     transition: opacity 0.4s 0.4s ease;
 }
-.results-display.content {
-    padding: 30px;
-    max-width: 420px;
-    width: 100%;
-    border-radius: 10px;
-    background: #fff;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
 .content img {
     display: flex;
     justify-content: center;
     align-content: center;
-    max-width: 130px;
-    margin: auto auto 20px auto;
-}
-.results-display h4 {
-    font-size: 2rem;
-    text-align: center;
+    max-width: 200px;
     margin: auto;
 }
-.results-display p {
-    font-size: 1.5rem;
-    margin: auto auto 15px auto;
-    font-weight: 500;
+.results-display h4 {
+    font-size: 3rem;
     text-align: center;
+    margin: -20px auto auto auto;
+    color: rgb(216, 216, 216);
+}
+.results-display p {
+    font-size: 2rem;
+    margin: auto auto 15px auto;
+    text-align: center;
+    color: rgb(216, 216, 216);
 }
 .results-display button {
     display: flex;
@@ -186,4 +167,5 @@ body {
     align-content: center;
     padding: 5px 10px;
     margin: auto;
+    color: rgb(216, 216, 216)
 }
