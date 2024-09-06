@@ -43,7 +43,6 @@ const wordSelector = (() => {
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
     currentWord = word;
     hintDisplay.textContent = hint;
-    //init();
 });
 
 const init = (() => {

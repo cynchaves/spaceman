@@ -31,47 +31,53 @@ body {
 }
 .container {
     display: flex;
-    width: 850px;
+    margin: auto 25px auto auto;
+    width: 1200px;
     gap: 70px;
     padding: 60px 40px;
-    background: #fff;
-    border-radius: 10px;
+    background: #ffffff82;
+    border-radius: 150px;
     align-items: flex-start;
+    align-content: flex-end;
     justify-content: space-between;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .welcome-display img {
+    display: block;
+    margin: auto;
     user-select: none;
     max-width: 270px;
 }
 .welcome-display h1 {
     display: flex;
     font-family: "Bungee Tint", sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     justify-content: center;
-    text-transform: uppercase;
 }
 .welcome-display p {
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 5px 0px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .welcome-display ol {
     text-align: left;
     padding: 0px 0px 0px 30px;
-    font-size: 1.25rem;
-
+    font-size: 1.3rem;
 }
-.game-box .word-display {
+.game-box {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.word-display {
     gap: 10px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 .word-display .letter {
     width: 28px;
@@ -82,19 +88,17 @@ body {
     text-transform: uppercase;
     border-bottom: 3px solid #000;
 }
-.word-display .letter.guessed {
+.word-display .letter.guesses {
     margin: -40px 0 35px;
     border-color: transparent;
 }
 .game-box h4 {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
-.game-box h4 b {
-    font-weight: 600;
-}
+
 .game-box .incorrect-guesses b {
     color: #ff0000;
 }
@@ -107,15 +111,15 @@ body {
 }
 
 :where(.results-display, .keyboard) button {
-    color: white;
+    color: rgb(0, 0, 0);
     border: black solid 2px;
     outline: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     border-radius: 4px;
     text-transform: uppercase;
-    background: rgb(158, 42, 42);
+    background: rgb(189, 28, 28);
 }
 .keyboard button {
     padding: 7px;
@@ -126,7 +130,7 @@ body {
     opacity: 0.6;
 }
 :where(.results-display, .keyboard) button:hover {
-    background: black;
+    background: rgb(255, 255, 255);
 }
 .results-display {
     position: fixed;
@@ -136,7 +140,7 @@ body {
     height: 100%;
     opacity: 0;
     pointer-events: none;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,60 +162,28 @@ body {
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-.results-display img {
+.content img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     max-width: 130px;
-    margin-bottom: 20px;
-}
-.results-display img[src="images/victory.gif"] {
-    margin-left: -10px;
+    margin: auto auto 20px auto;
 }
 .results-display h4 {
-    font-size: 1.53rem;
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
 }
 .results-display p {
-    font-size: 1.15rem;
-    margin: 15px 0 30px;
+    font-size: 1.5rem;
+    margin: auto auto 15px auto;
     font-weight: 500;
-}
-.results-display p b {
-    color: #5eba72;
-    font-weight: 600;
+    text-align: center;
 }
 .results-display button {
-    padding: 12px 23px;
-}
-@media (max-width: 782px) {
-    .container {
-        flex-direction: column;
-        padding: 30px 15px;
-        align-items: center;
-    }
-    .hangman-box img {
-        max-width: 200px;
-    }
-    .hangman-box h1 {
-        display: none;
-    }
-    .game-box h4 {
-        font-size: 1rem;
-    }
-    .word-display .letter {
-        margin-bottom: 35px;
-        font-size: 1.7rem;
-    }
-    .word-display .letter.guessed {
-        margin: -35px 0 25px;
-    }
-    .results-display img {
-        max-width: 120px;
-    }
-    .results-display h4 {
-        font-size: 1.45rem;
-    }
-    .results-display p {
-        font-size: 1.1rem;
-    }
-    .results-display button {
-        padding: 10px 18px;
-    }
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 5px 10px;
+    margin: auto;
 }
