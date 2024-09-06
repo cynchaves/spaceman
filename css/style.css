@@ -28,7 +28,6 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    /* background-color: black; */
 }
 .container {
     display: flex;
@@ -49,13 +48,14 @@ body {
     display: flex;
     font-family: "Bungee Tint", sans-serif;
     font-size: 2rem;
-    text-align: flex-start;
+    text-align: center;
     justify-content: center;
     text-transform: uppercase;
 }
 .welcome-display p {
     display: flex;
     justify-content: center;
+    text-align: center;
     padding: 5px 0px;
     font-size: 1.5rem;
 }
@@ -105,16 +105,17 @@ body {
     margin-top: 40px;
     justify-content: center;
 }
+
 :where(.results-display, .keyboard) button {
-    color: #fff;
-    border: none;
+    color: white;
+    border: black solid 2px;
     outline: none;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 4px;
     text-transform: uppercase;
-    background: #5eba72;
+    background: rgb(158, 42, 42);
 }
 .keyboard button {
     padding: 7px;
@@ -125,7 +126,7 @@ body {
     opacity: 0.6;
 }
 :where(.results-display, .keyboard) button:hover {
-    background: #8df3a3;
+    background: black;
 }
 .results-display {
     position: fixed;
