@@ -77,8 +77,8 @@ const init = (() => {
 });
 
 const endGameDisplay = ((isWin) => {
-    resultsDisplay.querySelector('img').src = `images/${isWin ? 'win' : 'lose'}.gif`;
-    resultsDisplay.querySelector('h4').innerText = isWin ? 'Congratulations! You Won!' : 'Please try again';
+    resultsDisplay.querySelector('img').src = `images/${isWin ? 'win-star' : 'lose-star'}.png`;
+    resultsDisplay.querySelector('h4').innerText = isWin ? 'Congratulations! You Win!' : 'Please try again';
     resultsDisplay.classList.add('show');
 });
 
