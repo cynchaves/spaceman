@@ -1,19 +1,8 @@
-.original-surfer-regular {
-    font-family: "Original Surfer", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-.bungee-tint-regular {
-    font-family: "Bungee Tint", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}  
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Original Surfer", sans-serif;
-    /* font-family: "Nerko One", sans-serif; */
     font-weight: 400;
     font-style: normal;
 }
@@ -39,7 +28,6 @@ body {
     gap: 70px;
     padding: 60px 40px;
     background: #ffffff82;
-    border-radius: 150px;
     align-items: flex-start;
     align-content: flex-end;
     justify-content: space-between;
@@ -124,17 +112,22 @@ body {
     padding: 7px;
     width: calc(100% / 9 - 5px);
 }
+.keyboard button:hover {
+    background: rgb(216, 216, 216);
+}
 .keyboard button[disabled] {
     pointer-events: none;
     opacity: 0.6;
 }
-.keyboard button:hover {
-    background: rgb(216, 216, 216);
+.results-display.show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.4s 0.4s ease;
 }
 .results-display {
     position: fixed;
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
     opacity: 0;
     pointer-events: none;
     background: rgba(0, 0, 0, 0.79);
@@ -145,19 +138,6 @@ body {
     z-index: 9999;
     padding: 0 10px;
     transition: opacity 0.4s ease;
-    margin: auto;
-    border-radius: 100px;
-}
-.results-display.show {
-    opacity: 1;
-    pointer-events: auto;
-    transition: opacity 0.4s 0.4s ease;
-}
-.content img {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    max-width: 200px;
     margin: auto;
 }
 .results-display h4 {
@@ -173,10 +153,19 @@ body {
     color: rgb(216, 216, 216);
 }
 .results-display button {
+    text-transform: none;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-content: center;
     padding: 5px 10px;
     margin: auto;
     color: rgb(216, 216, 216)
+}
+.content img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 200px;
+    margin: auto;
 }
