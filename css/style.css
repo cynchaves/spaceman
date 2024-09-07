@@ -66,11 +66,6 @@ body {
     font-size: 1.3rem;
     font-weight: bold;
 }
-.game-box {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
 .word-display {
     gap: 10px;
     list-style: none;
@@ -86,6 +81,11 @@ body {
     margin-bottom: 40px;
     text-transform: uppercase;
     border-bottom: 3.5px solid #000;
+}
+.game-box {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 .game-box h4 {
     text-align: center;
@@ -147,13 +147,7 @@ body {
 .results-display h4 {
     font-size: 3rem;
     text-align: center;
-    margin: -20px auto auto auto;
-    color: rgb(216, 216, 216);
-}
-.results-display p {
-    font-size: 2rem;
-    margin: auto auto 15px auto;
-    text-align: center;
+    margin: -10px auto 10px auto;
     color: rgb(216, 216, 216);
 }
 .results-display button {
@@ -166,7 +160,7 @@ body {
     margin: auto;
     color: rgb(216, 216, 216)
 }
-.content img {
+.results-content img {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -175,10 +169,27 @@ body {
 }
 @media (max-width: 950px) {
     .container {
-        display: flex;
         flex-direction: column;
         margin: auto;
         padding: 30px 15px;
         align-items: center;
-    };
+        min-height: 100vh;
+        max-width: 100vw;
+    }
+    .results-display {
+        position: absolute;
+        height: 45%;
+        width: 60%;
+        padding: 10px;
+        border-radius: 25px;
+        }
 }
+    @media (orientation: landscape) {
+        .results-display {
+        position: absolute;
+        height: 75%;
+        width: 50%;
+        padding: 10px;
+        border-radius: 25px;
+        }
+    }
