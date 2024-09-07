@@ -7,4 +7,4 @@ The technlogies I used to build the game include HTML, CSS and JavaScript.
 
 In the future, I would like to include sound to accompany the Win and Lose messages as well as a skip button to allow players to move ahead to the next word during gameplay.
 
-(screenshot.png)
+![Screenshot](https://github.com/user-attachments/assets/3705c788-bb91-4287-a329-911cfcb36f23)
