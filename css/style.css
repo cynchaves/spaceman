@@ -184,7 +184,7 @@ body {
         border-radius: 25px;
         }
 }
-    @media (orientation: landscape) {
+    @media (max-width: 950px) and (orientation: landscape) {
         .results-display {
         position: absolute;
         height: 75%;
